@@ -71,7 +71,8 @@ int _print_error(int errorcode, data_of_program *data)
       _printe(": Permission denied\n");
     }
   return (0);
-}#include "shell.h"
+}
+#include "shell.h"
 
  /**
   * _print - writes a array of chars in the standar output
@@ -80,10 +81,11 @@ int _print_error(int errorcode, data_of_program *data)
   * On error, -1 is returned, and errno is set appropriately.
   */
 
-int _print(char *string)
+/**int _print(char *string)
 {
   return (write(STDOUT_FILENO, string, str_length(string)));
 }
+*/
 
 /**
  * _printe - writes a array of chars in the standar error
@@ -92,11 +94,11 @@ int _print(char *string)
  * On error, -1 is returned, and errno is set appropriately.
  */
 
-int _printe(char *string)
-{
-  return (write(STDERR_FILENO, string, str_length(string)));
-}
-
+/** int _printe(char *string)
+ *{
+* return (write(STDERR_FILENO, string, str_length(string)));
+  * }
+*/
 /**
  * _print_error - writes a array of chars in the standart error
  * @data: a pointer to the program's data'
@@ -105,7 +107,7 @@ int _printe(char *string)
  * On error, -1 is returned, and errno is set appropriately.
  */
 
-int _print_error(int errorcode, data_of_program *data)
+/** int _print_error(int errorcode, data_of_program *data)
 {
   char n_as_string[10] = {'\0'};
 
@@ -145,3 +147,4 @@ int _print_error(int errorcode, data_of_program *data)
     }
   return (0);
 }
+**/
