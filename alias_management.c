@@ -90,7 +90,6 @@ temp = get_alias(data, alias_string + i + 1);
 break;
 }
 
-  /* Iterates through the alias list and check for coincidence of the varname */
 for (j = 0; data->alias_list[j]; j++)
 if (str_compare(buffer, data->alias_list[j], i) &&
 data->alias_list[j][i] == '=')
